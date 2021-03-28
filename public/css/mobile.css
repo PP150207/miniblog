@@ -1,6 +1,7 @@
 @media (max-width: 599px){
 
-/* ログインページ */
+/* ログインページ/新規登録画面 */
+
 
 .parent{
     margin-top: 120px;
@@ -10,19 +11,24 @@ h2{
     font-size: 40px;
 }
 
+.signup-password,
+.signup-username,
+.signup-email,
 .form-email,
 .form-psw{
     width: 50%;
     height: 28px;
     border-radius: 5px;
-
 }
 
-.form-psw{
+.form-psw,
+.signup-email,
+.signup-password{
     margin-top:10px;
 }
 
-.login-btn{
+.login-btn,
+.signup-btn{
     border: .4px inset #000000; 
     text-decoration: none;
     border-radius: 20px;
@@ -35,11 +41,6 @@ h2{
 ::placeholder{
     font-size: 15px;
 }
-
-/* 新規登録画面 */
-
-
-
 
 
 }
