@@ -41,7 +41,7 @@ const db_config = {
     database: 'heroku_4bd3ba2a65247f8'
 };
 
-const connection;
+var connection;
 
 function handleDisconnect() {
   console.log('INFO.CONNECTION_DB: ');
