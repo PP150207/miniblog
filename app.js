@@ -7,6 +7,7 @@ const mysql = require('mysql');
 const { resolveSoa, reverse } = require('dns');
 //express session を読み込み
 const session = require('express-session');
+var MemoryStore = require('memorystore')(session)
 // 3000番ポートで待ちうける
 app.listen(1996, () => {
   console.log('Running at Port 3000...');
@@ -18,6 +19,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 //フォームの値を受け取るのに必要な定型文
 app.use(express.urlencoded({extended: false}));
 
+app.use(session({
+  secret: 'my_secret_key',
+  cookie: { maxAge: 86400000 },
+  store: new MemoryStore({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  }),
+  resave: false,
+  secret: 'keyboard cat',
+  saveUninitialized: false,
+}))
+
 //node.jsからmysqlに接続設定
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -26,14 +38,6 @@ const connection = mysql.createConnection({
     database: 'blog'
   });
 
-//express sessionの設定
-app.use(
-    session({
-      secret: 'my_secret_key',
-      resave: false,
-      saveUninitialized: false,
-    })
-);
 
 app.use((req, res, next) =>{
   if(req.session.userId === undefined){
