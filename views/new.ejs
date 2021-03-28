@@ -1,0 +1,24 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/4086eb0aeb.js" crossorigin="anonymous"></script>
+</head>
+<%- include('partials/header'); %>
+<body>
+    <div class='container'>
+        <div class='post-container'>
+            <form action='/create' method='post' align=center> 
+                <div><textarea type='text' name='itemname' class='textbox title-form'></textarea></div>
+                <div><textarea type='text' name='itemName' class='textbox article-form' rows="8" cols="80"></textarea></div>
+                <p></p>
+                <input type="submit" value=" Post &#xf0a9; " class="fas fa-arrow-circle-right">
+            
+            </form>
+        </div>
+    </div>
+    <script src="/js/sample.js"></script>
+</body>
+</html>
+

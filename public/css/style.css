@@ -1,0 +1,188 @@
+
+/* インデックスページ*/
+.corona{
+    text-align: right;
+}
+
+.cat-img{
+    text-align: center;
+    margin:0;
+}
+
+ul {
+    list-style: none;
+}
+
+h2{
+    text-align: center;
+    margin-top:0;
+    margin-bottom: 15px;
+}
+
+.btn{
+    text-align: center;
+}
+
+.write{
+    border: .1px inset #000000; 
+    text-decoration: none;
+    border-radius: 20px;
+    padding:8px 16px;
+    color:#000000;
+}
+
+#item-data{
+    text-decoration: none;
+    color:#000000;
+    font-size:16px;
+    font-weight: bold;
+}
+
+#item-date{
+    font-size: 10px;
+    margin-top:5;
+    opacity:0.5;
+}
+
+hr{
+    opacity: .2;
+}
+
+.logout{
+    text-decoration: none;
+    color:#000000;
+    font-size:8px;
+    opacity: .5;
+}
+
+/* ログインページ */
+.parent{
+    margin-top:100px;
+}
+
+.form-email,
+.form-psw{
+    border-radius: 3px;
+    padding: 5px 0;
+    padding-left:2px;
+    border: solid thin;
+}
+
+.form-psw{
+    margin-top:6px;
+}
+
+.login-btn,
+.signup-btn,
+.update-btn,
+.delete-btn{
+    border: .1px inset #000000; 
+    text-decoration: none;
+    border-radius: 20px;
+    padding:5px 16px;
+    color:#000000;
+    cursor: pointer;
+}
+
+.parent{
+    text-align: center;
+}
+
+/* 新規登録ページ */
+.signup-username,
+.signup-email,
+.signup-password{
+    margin-top: 6px;
+    border-radius: 3px;
+    padding: 5px 0;
+    border: solid thin;
+    padding-left:2px;
+}
+
+/* 記事作成画面 */
+
+.post-container{
+    margin-top: 30px;
+}
+
+.textbox{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    width: 90%;
+    height: 30px;
+    resize: none;
+    font-size: 18px;
+    
+
+}
+.textbox:focus{
+    outline: none;
+}
+
+.title-form{
+    height:30px;
+    font-size: 22px;
+}
+
+.article-form{
+    margin-top: 6px;
+    border-radius: 10px;
+    height: 300px;
+    padding:5px;
+    appearance: none;
+    border: 1px solid #ccc;
+}
+
+.fas{ 
+    border: .1px inset #000000; 
+    text-decoration: none;
+    border-radius: 30px;
+    padding:10px 16px;
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.fa-arrow-circle-right{
+    font-size: 1.1em;
+}
+
+/* 記事編集・削除画面 */
+.article-update{
+    margin-top: 6px;
+    border-radius: 10px;
+    height: 300px;
+    padding:5px;
+    appearance: none;
+    border: 1px solid #ccc;
+    font-size: 18px;
+
+}
+
+.title-update{
+    font-size: 22px;
+    height: 30px;
+}
+
+#update-form{
+    margin-bottom: 0;
+}
+
+.update-btn{
+    margin-top:20px;
+    font-size: 1.1em;
+    margin-bottom:0;
+}
+
+.delete-btn{
+    background-color: black;
+    color: white;
+}
+
+.bottom-container{
+    width: 94%;
+    margin-top: 0;
+
+}

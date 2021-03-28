@@ -1,0 +1,23 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Blog</title>
+</head>
+
+<body>
+    <%- include('partials/header'); %>
+    <div>
+        <div class='container update-page' align=center>
+            <form action="/update/<%= item.id %>" method="post" id='update-form'>
+                <div><textarea type="text" name="itemname" class='textbox title-update'><%= item.title %>"</textarea></div>
+                <div><textarea type="text" name="itemName" class='textbox article-update'><%= item.article %></textarea></div>
+                <div><input type="submit" value="Update" class='update-btn'></div>
+            </form>
+        </div>
+        <div class='bottom-container' align=right>
+            <form action="/delete/<%= item.id %>" method="post">
+            <div><input type='submit' value='Delete' class='delete-btn'></div>
+            </form>
+        </div> 
+    </div>   
+</html>

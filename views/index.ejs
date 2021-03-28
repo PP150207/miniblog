@@ -1,0 +1,39 @@
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header'); %>
+
+  <div class='cat-img'>
+    <a href='/login'><img src="images/catimg.png" title='猫って可愛いよね' width="250px" height='300px'></a>
+  </div>
+
+  <div class='extra'>
+    <h2>Posts</h2>
+  </div>  
+
+  <div class='btn'>
+    <div>
+      <a href='/new' class='write'><img src='/images/pen.png' width="13px" height="13px"> write</a>
+    </div>
+  </div>
+
+  <div>
+    <ul class="table-body">
+
+        <% items.forEach((item) => { %>
+          <li>
+            <div>
+              <a href="/edit/<%= item.id %>" id='item-data'><%= item.title %></a>
+              <p id='item-date'><%= item.date %></p>
+              <hr>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+  </div>  
+  <%- include('partials/footer'); %>    
+</body>
+</html>
