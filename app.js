@@ -3,7 +3,7 @@ const app = express();
 // パス指定用モジュール
 const path = require('path');
 
-const PORT = process.env.PORT || 5000
+app.set('port', (process.env.PORT || 3000));
 
 //mysqlパッケージを読み込み
 const mysql = require('mysql');
