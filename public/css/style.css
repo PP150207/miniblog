@@ -120,31 +120,32 @@ hr{
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid #ccc;
-    width: 90%;
-    height: 30px;
+    width: 95%;
     resize: none;
-    font-size: 18px;
     font-family: sans-serif;
-    
-
+    border-radius: 0;
 }
 .textbox:focus{
     outline: none;
 }
 
 .title-form{
-    height:30px;
     font-size: 22px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+
 }
 
 .article-form{
+    border-top: none;
     margin-top: 6px;
-    border-radius: 10px;
-    height: 300px;
+    border-radius: 0;
     padding:5px;
     appearance: none;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+
 }
 
 .fas{ 

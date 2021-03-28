@@ -53,10 +53,14 @@ ul{
     width: auto;
 }
 
-.textbox{
-    font-family: sans-serif;
-
+.container{
+    height: 500px;
 }
+
+.title-form{
+    font-size: 24px;
+}
+
 
 
 
