@@ -42,5 +42,15 @@ h2{
     font-size: 15px;
 }
 
+/* インデックス画面 */
+
+ul{
+    padding-left: 2px;
+}
+
+.cat-img{
+    height: 30%;
+    width: auto;
+}
 
 }
