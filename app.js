@@ -3,7 +3,7 @@ const app = express();
 // パス指定用モジュール
 const path = require('path');
 
-app.set('port', (process.env.PORT || 3000));
+app.listen(process.env.PORT || 5000)
 
 //mysqlパッケージを読み込み
 const mysql = require('mysql');
@@ -35,10 +35,10 @@ app.use(session({
 
 //node.jsからmysqlに接続設定
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '5hm4z6md',
-    database: 'blog'
+    host: 'us-cdbr-east-03.cleardb.com',
+    user: 'b74b742454b9ab',
+    password: 'd16f1aff',
+    database: 'heroku_4bd3ba2a65247f8'
   });
 
 
