@@ -1,0 +1,40 @@
+@media (max-width: 599px){
+
+/* ログインページ */
+
+.parent{
+    margin-top: 120px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.form-email,
+.form-psw{
+    width: 50%;
+    height: 28px;
+    border-radius: 5px;
+
+}
+
+.form-psw{
+    margin-top:10px;
+}
+
+.login-btn{
+    border: .4px inset #000000; 
+    text-decoration: none;
+    border-radius: 20px;
+    padding:8px 16px;
+    font-size: 1.2em;
+    background-color:white;
+    -webkit-appearance: button;
+}
+
+::placeholder{
+    font-size: 15px;
+}
+
+
+}
