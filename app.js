@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 // パス指定用モジュール
 const path = require('path');
+
+const PORT = process.env.PORT || 5000
+
 //mysqlパッケージを読み込み
 const mysql = require('mysql');
 const { resolveSoa, reverse } = require('dns');
@@ -9,9 +12,9 @@ const { resolveSoa, reverse } = require('dns');
 const session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 // 3000番ポートで待ちうける
-app.listen(1996, () => {
-  console.log('Running at Port 3000...');
-});
+// app.listen(1996, () => {
+//   console.log('Running at Port 3000...');
+// });
 
 // 静的ファイルのルーティング
 app.use(express.static(path.join(__dirname, 'public')));
