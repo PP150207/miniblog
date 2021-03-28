@@ -108,6 +108,7 @@ hr{
     padding: 5px 0;
     border: solid thin;
     padding-left:2px;
+    appearance: none;
 }
 
 /* 記事作成画面 */
@@ -129,7 +130,8 @@ hr{
     outline: none;
 }
 
-.title-form{
+.title-form,
+.title-update{
     font-size: 22px;
     border-bottom: 1px solid #ccc;
     text-align: center;
@@ -137,7 +139,8 @@ hr{
 
 }
 
-.article-form{
+.article-form,
+.article-update{
     border-top: none;
     margin-top: 6px;
     border-radius: 0;
@@ -163,21 +166,6 @@ hr{
 }
 
 /* 記事編集・削除画面 */
-.article-update{
-    margin-top: 6px;
-    border-radius: 10px;
-    height: 300px;
-    padding:5px;
-    appearance: none;
-    border: 1px solid #ccc;
-    font-size: 18px;
-
-}
-
-.title-update{
-    font-size: 22px;
-    height: 30px;
-}
 
 #update-form{
     margin-bottom: 0;
