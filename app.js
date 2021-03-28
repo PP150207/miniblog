@@ -35,28 +35,31 @@ app.use(session({
 
 //node.jsからmysqlに接続設定
 const db_config = {
-  host: 'us-cdbr-east-03.cleardb.com',
+    host: 'us-cdbr-east-03.cleardb.com',
     user: 'b74b742454b9ab',
     password: 'd16f1aff',
     database: 'heroku_4bd3ba2a65247f8'
 };
 
-const connection = mysql.createConnection({ db_config });
+const connection;
 
 function handleDisconnect() {
-  console.log('1. connecting to db:');
+  console.log('INFO.CONNECTION_DB: ');
   connection = mysql.createConnection(db_config);
-
+  
+  //connection取得
   connection.connect(function(err) {
-    if (err) {
-        console.log('2. error when connecting to db:', err);
-        setTimeout(handleDisconnect, 1000);
-    }
+      if (err) {
+          console.log('ERROR.CONNECTION_DB: ', err);
+          setTimeout(handleDisconnect, 1000);
+      }
   });
-
-    connection.on('error', function(err) {
-      console.log('3. db error', err);
+  
+  //error('PROTOCOL_CONNECTION_LOST')時に再接続
+  connection.on('error', function(err) {
+      console.log('ERROR.DB: ', err);
       if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+          console.log('ERROR.CONNECTION_LOST: ', err);
           handleDisconnect();
       } else {
           throw err;
@@ -88,6 +91,7 @@ app.get('/', function(req,res){
         'SELECT * FROM items',
         (error, results) => {
           console.log(results);
+          console.log(error);
           res.render('login.ejs');
         }
     );
