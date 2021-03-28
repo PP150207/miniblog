@@ -85,7 +85,8 @@ hr{
     cursor: pointer;
 }
 
-.login-btn{
+.login-btn,
+.signup-btn{
     -webkit-appearance: button;
     background-color: white;
 }
