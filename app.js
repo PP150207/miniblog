@@ -1,32 +1,31 @@
 const express = require('express');
 const app = express();
-// パス指定用モジュール
 const path = require('path');
 
 app.listen(process.env.PORT || 5000)
 
-//mysqlパッケージを読み込み
 const mysql = require('mysql');
 const { resolveSoa, reverse } = require('dns');
-//express session を読み込み
+
 const session = require('express-session');
 var MemoryStore = require('memorystore')(session)
+
 // 3000番ポートで待ちうける
-// app.listen(1996, () => {
+// app.listen(3000, () => {
 //   console.log('Running at Port 3000...');
 // });
 
-// 静的ファイルのルーティング
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-//フォームの値を受け取るのに必要な定型文
+
 app.use(express.urlencoded({extended: false}));
 
 app.use(session({
   secret: 'my_secret_key',
   cookie: { maxAge: 86400000 },
   store: new MemoryStore({
-    checkPeriod: 86400000 // prune expired entries every 24h
+    checkPeriod: 86400000
   }),
   resave: false,
   secret: 'keyboard cat',

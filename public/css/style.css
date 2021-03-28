@@ -9,9 +9,14 @@
     margin:0;
 }
 
+
 ul {
     list-style: none;
+    padding-left: 0;
 }
+
+
+
 
 h2{
     text-align: center;
@@ -82,6 +87,12 @@ hr{
     padding:5px 16px;
     color:#000000;
     cursor: pointer;
+}
+
+.login-btn,
+.signup-btn{
+    -webkit-appearance: button;
+    background-color: white;
 }
 
 .parent{
