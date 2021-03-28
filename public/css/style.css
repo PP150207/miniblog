@@ -83,7 +83,11 @@ hr{
     padding:5px 16px;
     color:#000000;
     cursor: pointer;
+}
+
+.login-btn{
     -webkit-appearance: button;
+    background-color: white;
 }
 
 .parent{
