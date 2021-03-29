@@ -1,27 +1,17 @@
-<!DOCTYPE html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Blog</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+<%- include('partials/header'); %>
 
-  <body>
-
-    <div class='parent'>
-      <h2 class='signup-title'>Signup</h2>
-    </div>
-    <div align=center>
-      <form action='/signup' method='post' class='signup-form'>
-        <div><input type='text' name='username'placeholder="Username" class='signup-username'></div>
-        <div><input type='text' name='email' placeholder="Email" class='signup-email'></div>
-        <div><input type='password' name='password' placeholder="Password" class='signup-password'></div>
-        <p></p>
-        <div><input type='submit' value='Signup' class='signup-btn'></div>
-      </form>
-    </div>
-
-    <script src="/js/sample.js"></script>
-  </body>
+<body>
+  <div class='parent'>
+    <h2 class='signup-title'>Signup</h2>
+  </div>
+  <div align=center>
+    <form action='/signup' method='post' class='signup-form'>
+      div><input type='text' name='username'placeholder="Username" class='signup-username'></div>
+      <div><input type='text' name='email' placeholder="Email" class='signup-email'></div>
+      <div><input type='password' name='password' placeholder="Password" class='signup-password'></div>
+      <p></p>
+      <div><input type='submit' value='Signup' class='signup-btn'></div>
+    </form>
+  </div>
+</body>
 </html>

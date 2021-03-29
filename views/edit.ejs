@@ -1,12 +1,6 @@
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<%- include('partials/header'); %>
 
 <body>
-    <%- include('partials/header'); %>
     <div align=center>
         <div class='container update-page'>
             <form action="/update/<%= item.id %>" method="post" id='update-form'>
