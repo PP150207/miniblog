@@ -80,13 +80,14 @@ hr{
 .login-btn,
 .signup-btn,
 .update-btn,
-.delete-btn{
+.close-btn{
     border: .1px inset #000000; 
     text-decoration: none;
     border-radius: 20px;
     padding:5px 16px;
     color:#000000;
     cursor: pointer;
+    -webkit-appearance: button;
 }
 
 .login-btn,
@@ -159,6 +160,7 @@ hr{
     color:white;
     background-color: black;
     cursor: pointer;
+    -webkit-appearance: button;
 }
 
 .fa-arrow-circle-right{
@@ -171,19 +173,21 @@ hr{
     margin-bottom: 0;
 }
 
-.update-btn{
+.update-btn,
+.close-btn{
     margin-top:20px;
     font-size: 1.1em;
     margin-bottom:0;
-}
-
-.delete-btn{
-    background-color: black;
-    color: white;
+    background-color: white;
 }
 
 .bottom-container{
     width: 94%;
     margin-top: 0;
 
+}
+
+.close-btn{
+    padding-right: 23px;
+    padding-left: 23px;
 }
