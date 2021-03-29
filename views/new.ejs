@@ -1,22 +1,10 @@
-
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-    <script src="https://kit.fontawesome.com/4086eb0aeb.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 <%- include('partials/header'); %>
 
 <body>
     <div class='container'>
         <div class="col-xs-10">
             <form action='/create' method='post' align=center> 
-                <div><textarea type='text' name='itemname' class='textbox title-form' rows="1"></textarea></div>
+                <div><textarea type='text' required name='itemname' class='textbox title-form' rows="1"></textarea></div>
                 <div><textarea type='text' name='itemName' class='textbox article-form' rows="8"></textarea></div>
                 <p></p>
                 <input type="submit" value=" Post &#xf0a9; " class="fas fa-arrow-circle-right">

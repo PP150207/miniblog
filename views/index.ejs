@@ -1,12 +1,6 @@
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Blog</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-</head>
-<body>
-  <%- include('partials/header'); %>
+<%- include('partials/header'); %>
 
+<body>
   <div class='cat-img'>
     <a href='/login'><img src="images/catimg.png" title='猫って可愛いよね' width="200px" height='240px'></a>
   </div>
@@ -27,7 +21,7 @@
         <% items.forEach((item) => { %>
           <li>
             <div>
-              <a href="/edit/<%= item.id %>" id='item-data' class='title-data' style="font-size: 14pt;font-weight: bold;"><%= item.title %></a>
+              <a href="/edit/<%= item.id %>" id='item-data' class='title-data' style="font-size: 13pt;font-weight: bold;"><%= item.title %></a>
               <p id='item-date' style="font-size: 9pt"><%= item.date %></p>
               <hr>
             </div>
