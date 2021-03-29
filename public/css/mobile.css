@@ -3,7 +3,10 @@
 /* ログインページ/新規登録画面 */
 
 .form-email,
-.form-psw{
+.form-psw,
+.signup-username,
+.signup-email,
+.signup-password{
     font-size: 16px;
 }
 
