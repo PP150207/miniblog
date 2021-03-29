@@ -2,6 +2,13 @@
 
 /* ログインページ/新規登録画面 */
 
+.form-email,
+.form-psw,
+.signup-username,
+.signup-email,
+.signup-password{
+    font-size: 16px;
+}
 
 .parent{
     margin-top: 120px;
@@ -53,11 +60,13 @@ ul{
     width: auto;
 }
 
-.textbox{
-    font-family: sans-serif;
-
+.container{
+    height: 500px;
 }
 
+.title-form{
+    font-size: 24px;
+}
 
 
 }

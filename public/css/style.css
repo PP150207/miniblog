@@ -80,13 +80,14 @@ hr{
 .login-btn,
 .signup-btn,
 .update-btn,
-.delete-btn{
+.close-btn{
     border: .1px inset #000000; 
     text-decoration: none;
     border-radius: 20px;
     padding:5px 16px;
     color:#000000;
     cursor: pointer;
+    -webkit-appearance: button;
 }
 
 .login-btn,
@@ -108,6 +109,7 @@ hr{
     padding: 5px 0;
     border: solid thin;
     padding-left:2px;
+    appearance: none;
 }
 
 /* 記事作成画面 */
@@ -120,31 +122,34 @@ hr{
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid #ccc;
-    width: 90%;
-    height: 30px;
+    width: 95%;
     resize: none;
-    font-size: 18px;
     font-family: sans-serif;
-    
-
+    border-radius: 0;
 }
 .textbox:focus{
     outline: none;
 }
 
-.title-form{
-    height:30px;
+.title-form,
+.title-update{
     font-size: 22px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+
 }
 
-.article-form{
+.article-form,
+.article-update{
+    border-top: none;
     margin-top: 6px;
-    border-radius: 10px;
-    height: 300px;
+    border-radius: 0;
     padding:5px;
     appearance: none;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+
 }
 
 .fas{ 
@@ -155,6 +160,7 @@ hr{
     color:white;
     background-color: black;
     cursor: pointer;
+    -webkit-appearance: button;
 }
 
 .fa-arrow-circle-right{
@@ -162,39 +168,26 @@ hr{
 }
 
 /* 記事編集・削除画面 */
-.article-update{
-    margin-top: 6px;
-    border-radius: 10px;
-    height: 300px;
-    padding:5px;
-    appearance: none;
-    border: 1px solid #ccc;
-    font-size: 18px;
-
-}
-
-.title-update{
-    font-size: 22px;
-    height: 30px;
-}
 
 #update-form{
     margin-bottom: 0;
 }
 
-.update-btn{
+.update-btn,
+.close-btn{
     margin-top:20px;
     font-size: 1.1em;
     margin-bottom:0;
-}
-
-.delete-btn{
-    background-color: black;
-    color: white;
+    background-color: white;
 }
 
 .bottom-container{
     width: 94%;
     margin-top: 0;
 
+}
+
+.close-btn{
+    padding-right: 23px;
+    padding-left: 23px;
 }
