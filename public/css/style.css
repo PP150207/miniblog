@@ -1,5 +1,9 @@
 
 /* インデックスページ*/
+/* body{
+    font-family: 'Noto Sans JP', sans-serif;
+} */
+
 .corona{
     text-align: right;
 }
@@ -124,7 +128,6 @@ hr{
     border-left: none;
     width: 95%;
     resize: none;
-    font-family: sans-serif;
     border-radius: 0;
 }
 .textbox:focus{
