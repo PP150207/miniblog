@@ -1,6 +1,10 @@
 @media (max-width: 599px){
 
 /* ログインページ/新規登録画面 */
+body{
+    font-family: sans-serif;
+}
+
 
 .form-email,
 .form-psw,
@@ -15,7 +19,7 @@
 }
 
 h2{
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .signup-password,
@@ -50,6 +54,11 @@ h2{
 }
 
 /* インデックス画面 */
+
+.write{
+    font-size: 20px;
+    font-family: 900;
+}
 
 ul{
     padding-left: 2px;
