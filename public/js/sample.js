@@ -63,3 +63,23 @@ function releaseFunction(e)
   keyStatus[e.keyCode] = false;
 }
 
+// var btn = document.getElementById('close');
+// btn.addEventListener('click', function(){
+//     const result = window.confirm('削除しますか？');
+
+//     if(result){
+//         console.log('egu'); 
+//     }else{
+//         return false;
+//     }
+   
+// })
+
+function Check(){
+    var checked = confirm("削除します");
+    if (checked == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
