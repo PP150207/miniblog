@@ -26,3 +26,37 @@ document.getElementById('textarea').onkeypress = (e) => {
         document.getElementById('textarea1').focus();
     }
 }
+
+// command + enter でsubmit を可能に
+// 後から気づいたけど、キーコードググるよりも
+// console.log(e.Keycode);
+// で出した方が楽だったかも
+
+
+document.onkeydown = pressFunction;
+document.onkeyup = releaseFunction;
+var keyStatus = {};
+
+function pressFunction(e){
+  if(e.keyCode == 91)  
+    console.log('⌘');   //⌘が押されたか確認
+
+  if (e.keyCode == 13)  
+  {
+    console.log('Enter'); //Enterが押されたか確認
+  }
+
+  keyStatus[e.keyCode] = true; // キーコードをtrueに
+  if(keyStatus[91] && keyStatus[13]) {
+    console.log('⌘+Enter'); 
+    document.getElementById('write-form').submit();
+  }
+}
+
+
+// キーが離されたらfalseに
+function releaseFunction(e)
+{
+  keyStatus[e.keyCode] = false;
+}
+
