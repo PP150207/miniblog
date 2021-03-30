@@ -20,7 +20,7 @@ textarea1.addEventListener('input', ()=>{
 });
 
 //title 画面でenter　key を取得した際にキキーコード取得 => enter => focusを article 画面へ
-document.getElementById('textarea').onkeypress = (e) => {
+document.getElementById('textarea').onkeyup = (e) => {
     const key = e.keyCode || e.charCode || 13;
     if(key == 13){
         document.getElementById('textarea1').focus();
