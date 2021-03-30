@@ -13,14 +13,10 @@
     margin:0;
 }
 
-
 ul {
     list-style: none;
     padding-left: 0;
 }
-
-
-
 
 h2{
     text-align: center;
@@ -117,6 +113,11 @@ hr{
     appearance: none;
 }
 
+.container{
+    margin-top: 45px;
+}
+
+
 /* 記事作成画面 */
 
 .post-container{
@@ -138,7 +139,8 @@ hr{
 .title-form,
 .title-update{
     font-size: 22px;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
+    border-bottom: none;
     text-align: center;
     font-weight: bold;
 
