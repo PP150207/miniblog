@@ -1,3 +1,5 @@
+document.getElementById('textarea1').focus();
+
 
 let textarea1 = document.getElementById('textarea1');
 let clientHeight1 = textarea1.clientHeight;
@@ -6,6 +8,8 @@ textarea1.addEventListener('input', ()=>{
     let scrollHeight1 = textarea1.scrollHeight;
     textarea1.style.height = scrollHeight1 + 'px';
 });
+
+
 
 
 
