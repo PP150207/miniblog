@@ -13,14 +13,10 @@
     margin:0;
 }
 
-
 ul {
     list-style: none;
     padding-left: 0;
 }
-
-
-
 
 h2{
     text-align: center;
@@ -117,6 +113,11 @@ hr{
     appearance: none;
 }
 
+.container{
+    margin-top: 45px;
+}
+
+
 /* 記事作成画面 */
 
 .post-container{
@@ -124,9 +125,7 @@ hr{
 }
 
 .textbox{
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border: none;
     width: 95%;
     resize: none;
     border-radius: 0;
@@ -138,7 +137,7 @@ hr{
 .title-form,
 .title-update{
     font-size: 22px;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     text-align: center;
     font-weight: bold;
 
@@ -146,12 +145,11 @@ hr{
 
 .article-form,
 .article-update{
-    border-top: none;
     margin-top: 6px;
     border-radius: 0;
     padding:5px;
     appearance: none;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     font-size: 18px;
 
 }
@@ -173,9 +171,9 @@ hr{
 
 /* 記事編集・削除画面 */
 
-#update-form{
+/* #update-form{
     margin-bottom: 0;
-}
+} */
 
 .update-btn,
 .close-btn{
