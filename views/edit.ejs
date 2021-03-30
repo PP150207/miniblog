@@ -4,8 +4,8 @@
     <div align=center>
         <div class='container update-page'>
             <form action="/update/<%= item.id %>" method="post" id='update-form'>
-                <div><textarea type="text" name="itemname" class='textbox title-update' rows="1"><%= item.title %></textarea></div>
-                <div><textarea type="text" name="itemName" class='textbox article-update'rows="8"><%= item.article %></textarea></div>
+                <div><textarea type="text" name="itemname" class='textbox title-update' rows="1" id='textarea'><%= item.title %></textarea></div>
+                <div><textarea type="text" name="itemName" class='textbox article-update'rows="8" id='textarea1'><%= item.article %></textarea></div>
                 <div><input type="submit" value="Update" class='update-btn'></div>
             </form>
         </div>
@@ -14,5 +14,6 @@
             <div><input type='submit' value='Close' class='close-btn'></div>
             </form>
         </div> 
-    </div>   
-</html>
+    </div> 
+    <script src="/js/sample.js"></script>
+</body> 
