@@ -3,7 +3,7 @@
 <body>
     <div align=center>
         <div class='container update-page'>
-            <form action="/update/<%= item.id %>" method="post" id='update-form'>
+            <form action="/update/<%= item.id %>" method="post" id='write-form'>
                 <div><textarea type="text" name="itemname" class='textbox title-update' rows="1" id='textarea'><%= item.title %></textarea></div>
                 <div><textarea type="text" name="itemName" class='textbox article-update'rows="8" id='textarea1'><%= item.article %></textarea></div>
                 <div><input type="submit" value="Update" class='update-btn'></div>
