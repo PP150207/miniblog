@@ -1,7 +1,6 @@
 //writeページにアクセスした際にフォーカスをtextareaに合わせる。
 document.getElementById('textarea').focus();
 
-
 //textareaに文字を入力した際に横幅いっぱいになると自動で改行する。
 let textarea = document.getElementById('textarea');
 let clientHeight = textarea.clientHeight;
@@ -26,6 +25,9 @@ document.getElementById('textarea').onkeydown = (e) => {
         document.getElementById('textarea1').focus();
     }
 }
+
+
+
 
 // command + enter でsubmit を可能に
 // 後から気づいたけど、キーコードググるよりも
