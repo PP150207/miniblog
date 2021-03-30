@@ -10,7 +10,8 @@
 
 .cat-img{
     text-align: center;
-    margin:0;
+    margin-top: 10px;
+    height: 150px;
 }
 
 ul {
