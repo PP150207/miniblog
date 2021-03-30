@@ -55,14 +55,24 @@ hr{
     opacity: .2;
 }
 
-.logout{
+.logout,
+.signup{
     text-decoration: none;
     color:#000000;
     font-size:8px;
     opacity: .5;
 }
 
+.table-body{
+    margin-bottom: 0;
+}
+
+
+
+
+
 /* ログインページ */
+
 .parent{
     margin-top:100px;
 }
