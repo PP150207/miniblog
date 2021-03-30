@@ -56,12 +56,13 @@ hr{
 }
 
 .logout,
-.signup{　
+.signup{
     text-decoration: none;
-    color:#000000;
-    font-size:8px;
-    opacity: .5;
+    color: black;
+    font-size: 16px;
+    opacity: 0.5;
 }
+
 
 .table-body{
     margin-bottom: 0;
