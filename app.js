@@ -10,7 +10,7 @@ const { resolveSoa, reverse } = require('dns');
 const session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 
-// 3000番ポートで待ちうける
+//ポート3000で待ちうける
 app.listen(3000, () => {
   console.log('Running at Port 3000...');
 });
