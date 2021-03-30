@@ -11,9 +11,9 @@ const session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 
 // 3000番ポートで待ちうける
-// app.listen(3000, () => {
-//   console.log('Running at Port 3000...');
-// });
+app.listen(3000, () => {
+  console.log('Running at Port 3000...');
+});
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -246,6 +246,13 @@ app.get('/logout', (req, res) =>{
     res.redirect('/login');
   })
 });
+
+
+app.get('/hello', (req, res) =>{
+    res.render('hello.ejs');
+});
+
+
 
 
 
