@@ -55,7 +55,8 @@ hr{
     opacity: .2;
 }
 
-.logout{
+.logout,
+.signup{
     text-decoration: none;
     color:#000000;
     font-size:8px;
@@ -71,6 +72,7 @@ hr{
 
 
 /* ログインページ */
+
 .parent{
     margin-top:100px;
 }
