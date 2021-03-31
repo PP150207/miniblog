@@ -85,15 +85,8 @@ handleDisconnect();
 
 
 //rootURL
-app.get('/', function(req,res){
-    connection.query(
-        'SELECT * FROM items',
-        (error, results) => {
-          // console.log(results);
-          // console.log(error);
-          res.render('login.ejs');
-        }
-    );
+app.get('/login',(req, res) => {
+  res.render('login.ejs');
 });
 
 //ログイン認証
@@ -111,7 +104,6 @@ app.post('/login',(req,res)  => {
                 req.session.userId = results[0].id;
                 req.session.email = results[0].email;
                 req.session.username = results[0].username;
-                
                 
                 res.redirect('/index');
               }else{
@@ -175,7 +167,7 @@ app.get('/new',(req,res)=>{
 
 app.get('/index', (req, res) => {
       connection.query( 
-        'SELECT title,date FROM items WHERE userid = ?',
+        'SELECT title,date,id FROM items WHERE userid = ?',
         [req.session.userId],
         (error, results, fields) => {
           const reversed = results.reverse();
