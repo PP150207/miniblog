@@ -1,4 +1,10 @@
 // writeページにアクセスした際にフォーカスをtextareaに合わせる。
+if(  navigator.userAgent.indexOf('iPhone') > 0){
+    console.log("This is iphone")
+}else{
+    console.log("This isn't iPhone");
+}
+        
 document.getElementById('textarea').focus();
 
 
@@ -49,7 +55,7 @@ function pressFunction(e){
 
   keyStatus[e.keyCode] = true; // キーコードをtrueに
   if(keyStatus[91] && keyStatus[13]) {
-    // console.log('⌘+Enter'); 
+//  console.log('⌘+Enter'); 
     document.getElementById('write-form').submit();
   }
 }
