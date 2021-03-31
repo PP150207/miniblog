@@ -162,7 +162,7 @@ hr{
     text-align: center;
     font-weight: bold;
     padding-bottom: 9px;
-
+    resize: none;
 }
 
 .article-form,

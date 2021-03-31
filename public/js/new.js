@@ -1,4 +1,5 @@
 // writeページにアクセスした際にフォーカスをタイトルtextareaに自動で合わせる。(PCのみ)
+//後から知ったけど、autofocusで勝手に合わせてくれるらしい。
 function FocusTitle(){
     if( navigator.userAgent.indexOf('iPhone') < 0){
         document.getElementById('textarea').focus();
