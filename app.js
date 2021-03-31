@@ -175,11 +175,11 @@ app.get('/new',(req,res)=>{
 
 app.get('/index', (req, res) => {
       connection.query( 
-        'SELECT * FROM items WHERE userid = ?',
+        'SELECT title,date FROM items WHERE userid = ?',
         [req.session.userId],
         (error, results, fields) => {
           const reversed = results.reverse();
-          // console.log(results);
+          console.log(results);
           const ui = req.session.userId;
 
           //DBとの接続が切れて,再接続した場合を想定,
