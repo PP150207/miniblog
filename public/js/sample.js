@@ -1,10 +1,13 @@
 // writeページにアクセスした際にフォーカスをtextareaに合わせる。
-if(  navigator.userAgent.indexOf('iPhone') > 0){
-    console.log("This is iphone")
-}else{
-    document.getElementById('textarea').focus();
+function FocusTitle(){
+    if(  navigator.userAgent.indexOf('iPhone') > 0){
+        console.log("This is iphone")
+    }else{
+        document.getElementById('textarea').focus();
+    }
 }
-        
+
+FocusTitle();
 
 
 // textareaに文字を入力した際に横幅いっぱいになると自動で改行する。
