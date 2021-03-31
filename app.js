@@ -171,7 +171,6 @@ app.get('/index', (req, res) => {
         [req.session.userId],
         (error, results, fields) => {
           const reversed = results.reverse();
-          console.log(results);
           const ui = req.session.userId;
 
           //DBとの接続が切れて,再接続した場合を想定,
@@ -218,7 +217,7 @@ app.post('/delete/:id', (req, res) => {
 
 app.get('/edit/:id', (req, res) => {
     connection.query(
-        'SELECT * FROM items WHERE id= ?',
+        'SELECT id, title, article FROM items WHERE id= ?',
         [req.params.id],
         (error,results)=>{
         res.render('edit.ejs', {item:results[0]});
