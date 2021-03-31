@@ -149,8 +149,8 @@ hr{
 .form-psw:focus,
 .signup-username:focus,
 .signup-password:focus,
-.signup-email:focus
-/* .textbox:focus */
+.signup-email:focus,
+.textbox:focus
 {
     outline:none;
 }
