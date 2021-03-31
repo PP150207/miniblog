@@ -49,7 +49,7 @@ function pressFunction(e){
 
   keyStatus[e.keyCode] = true; // キーコードをtrueに
   if(keyStatus[91] && keyStatus[13]) {
-    // console.log('⌘+Enter'); 
+//  console.log('⌘+Enter'); 
     document.getElementById('write-form').submit();
   }
 }
