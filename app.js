@@ -43,7 +43,6 @@ const db_config = {
 var connection;
 
 function handleDisconnect() {
-  console.log('INFO.CONNECTION_DB: ');
   connection = mysql.createConnection(db_config);
   
   //connection取得
@@ -70,18 +69,19 @@ handleDisconnect();
 
 
 
-app.use((req, res, next) =>{
-  if(req.session.userId === undefined){
-    res.locals.username = 'ゲスト';
-    res.locals.isLoggedIn = false;
-  }else{
-    res.locals.username = req.session.username;
-    res.locals.isLoggedIn = true;
-    res.locals.userId = req.session.userId;
-  };
+// app.use((req, res, next) =>{
+//   if(req.session.userId === undefined){
+//     res.locals.username = 'ゲスト';
+//     res.locals.isLoggedIn = false;
+//   }else{
+//     res.locals.username = req.session.username;
+//     res.locals.isLoggedIn = true;
 
-  next();
-});
+//   };
+  
+
+//   next();
+// });
 
 
 //rootURL
@@ -89,8 +89,8 @@ app.get('/', function(req,res){
     connection.query(
         'SELECT * FROM items',
         (error, results) => {
-          console.log(results);
-          console.log(error);
+          // console.log(results);
+          // console.log(error);
           res.render('login.ejs');
         }
     );
@@ -179,7 +179,7 @@ app.get('/index', (req, res) => {
         [req.session.userId],
         (error, results, fields) => {
           const reversed = results.reverse();
-          console.log(results);
+          // console.log(results);
           const ui = req.session.userId;
 
           //DBとの接続が切れて,再接続した場合を想定,
@@ -204,7 +204,7 @@ app.post('/create', (req, res) => {
     
     connection.query(            
       'INSERT INTO items (title, article, userid, date) VALUES (?, ?, ?, ?)',            
-      [req.body.itemname, req.body.itemName, res.locals.userId, formatted],            
+      [req.body.itemname, req.body.itemName, req.session.userId, formatted],            
       (error, results) => {  
       
       res.redirect('/index');     
