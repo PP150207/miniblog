@@ -176,10 +176,21 @@ app.get('/new',(req,res)=>{
 app.get('/index', (req, res) => {
       connection.query( 
         'SELECT * FROM items WHERE userid = ?',
-        [res.locals.userId],
+        [req.session.userId],
         (error, results, fields) => {
           const reversed = results.reverse();
-          res.render('index.ejs', {items: reversed});
+          console.log(results);
+          const ui = req.session.userId;
+
+          //DBとの接続が切れて,再接続した場合を想定,
+          //セッション情報を保持してなかった場合にindexにアクセスしてもログインページに飛ばす.
+
+          if(ui === undefined){                        
+            res.render('login.ejs');
+          }else{
+            res.render('index.ejs', {items: reversed});
+          }
+          
         }
       );
 });
