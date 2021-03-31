@@ -2,10 +2,9 @@
 if(  navigator.userAgent.indexOf('iPhone') > 0){
     console.log("This is iphone")
 }else{
-    console.log("This isn't iPhone");
+    document.getElementById('textarea').focus();
 }
         
-document.getElementById('textarea').focus();
 
 
 // textareaに文字を入力した際に横幅いっぱいになると自動で改行する。
