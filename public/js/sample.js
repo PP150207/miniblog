@@ -1,4 +1,10 @@
 // writeページにアクセスした際にフォーカスをtextareaに合わせる。
+if(  navigator.userAgent.indexOf('iPhone') > 0){
+    console.log("This is iphone")
+}else{
+    console.log("This isn't iPhone");
+}
+        
 document.getElementById('textarea').focus();
 
 
